@@ -111,12 +111,13 @@ console.log("uitwerking 2b")
 function averageGrade(arrayOfGrades) {
     let sumOfGrades = 0;
     for (let i = 0; i < arrayOfGrades.length; i++) {
-        sumOfGrades = sumOfGrades + grades[i];
+        sumOfGrades = sumOfGrades + arrayOfGrades[i];
+
     }
-    return sumOfGrades;
+    return sumOfGrades / arrayOfGrades.length;
 }
 
-console.log(averageGrade(grades) / grades.length);
+console.log(averageGrade(grades));
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
