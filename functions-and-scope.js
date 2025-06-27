@@ -14,6 +14,25 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
+// stap 1: itereer door de array heen met een for-loop
+// stap 2: gebruik daarin een if-statement om alles met een 8 of hoger af te vangen.
+// stap 3: gebruik een grades.lenth in de for-loop om ervoor te zorgen dat altijd de hele array wordt geïtereerd.
+// stap 4: maak een variabele aan die het aantal cum laude cijfers opslaat
+// stap 5: log het resultaat van de variabele in de console
+
+let cumLaudeCount = 0;
+
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 8) {
+        cumLaudeCount ++;
+    }
+}
+
+console.log(cumLaudeCount)
+
+
+
+
 // ---- Verwachte uitkomst: 6
 
 
@@ -27,7 +46,9 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+function cumLaude() {
 
+}
 
 
 /* Opdracht  2: Gemiddeld cijfer */
