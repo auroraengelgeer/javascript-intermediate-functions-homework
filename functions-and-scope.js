@@ -21,6 +21,9 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // stap 5: log het resultaat van de variabele in de console
 
 /*
+
+console.log("uitwerking 1a")
+
 let cumLaudeCount = 0;
 
 for (let i = 0; i < grades.length; i++) {
@@ -46,7 +49,7 @@ console.log(cumLaudeCount)
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
-
+console.log("uitwerking 1b")
 
 function cumLaude(arrayOfGrades) {
     let cumLaudeCount = 0
@@ -79,7 +82,9 @@ console.log(cumLaude(grades))
 *  stap 3: deel het totaal van de array door het aantal items in de array
 *  stap 4: sla het gemiddelde cijfer op in een variabele en log de variabele in de terminal. */
 
-let sumOfGrades= 0
+/*console.log("uitwerking 2a")
+
+/!*let sumOfGrades= 0;
 
 
 for (let i = 0; i < grades.length; i++) {
@@ -91,7 +96,7 @@ console.log(sumOfGrades);
 const averageGrade = sumOfGrades / grades.length;
 
 
-console.log(averageGrade);
+console.log(averageGrade);*!/*/
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
@@ -101,7 +106,17 @@ console.log(averageGrade);
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
 
+console.log("uitwerking 2b")
 
+function averageGrade(arrayOfGrades) {
+    let sumOfGrades = 0;
+    for (let i = 0; i < arrayOfGrades.length; i++) {
+        sumOfGrades = sumOfGrades + grades[i];
+    }
+    return sumOfGrades;
+}
+
+console.log(averageGrade(grades) / grades.length);
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
