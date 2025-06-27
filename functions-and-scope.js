@@ -106,7 +106,7 @@ console.log(averageGrade);*!/*/
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
 
-console.log("uitwerking 2b")
+/*console.log("uitwerking 2b")
 
 function averageGrade(arrayOfGrades) {
     let sumOfGrades = 0;
@@ -117,7 +117,7 @@ function averageGrade(arrayOfGrades) {
     return sumOfGrades / arrayOfGrades.length;
 }
 
-console.log(averageGrade(grades));
+console.log(averageGrade(grades));*/
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -129,7 +129,18 @@ console.log(averageGrade(grades));
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
+console.log("uitwerking 2c")
 
+function averageGrade(arrayOfGrades) {
+    let sumOfGrades = 0;
+    for (let i = 0; i < arrayOfGrades.length; i++) {
+        sumOfGrades = sumOfGrades + arrayOfGrades[i];
+
+    }
+    return parseFloat((sumOfGrades / arrayOfGrades.length).toFixed(2));
+}
+
+console.log(averageGrade(grades));
 
 
 /* Bonusopdracht: hoogste cijfer */
