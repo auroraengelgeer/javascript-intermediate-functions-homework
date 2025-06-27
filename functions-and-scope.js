@@ -33,8 +33,6 @@ console.log(cumLaudeCount)
 */
 
 
-
-
 // ---- Verwachte uitkomst: 6
 
 
@@ -72,8 +70,28 @@ console.log(cumLaude(grades))
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 
+/* 1: een gemiddelde uitrekenen is: totale som van cijfers / aantal cijfers
+*  2: alle cijfers uit de array bij elkaar optellen, en vervolgens delen door het aantal cijfers in de array
+*  3: gebruik een grades.length om altijd de gehele array door te itereren
+*
+*  stap 1: tel hoeveel waardes er in de array zitten
+*  stap 2: tel al deze waardes bij elkaar op
+*  stap 3: deel het totaal van de array door het aantal items in de array
+*  stap 4: sla het gemiddelde cijfer op in een variabele en log de variabele in de terminal. */
+
+let sumOfGrades= 0
 
 
+for (let i = 0; i < grades.length; i++) {
+    sumOfGrades = sumOfGrades + grades[i];
+}
+
+console.log(sumOfGrades);
+
+const averageGrade = sumOfGrades / grades.length;
+
+
+console.log(averageGrade);
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
@@ -82,6 +100,8 @@ console.log(cumLaude(grades))
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
