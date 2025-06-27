@@ -20,6 +20,7 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // stap 4: maak een variabele aan die het aantal cum laude cijfers opslaat
 // stap 5: log het resultaat van de variabele in de console
 
+/*
 let cumLaudeCount = 0;
 
 for (let i = 0; i < grades.length; i++) {
@@ -29,6 +30,7 @@ for (let i = 0; i < grades.length; i++) {
 }
 
 console.log(cumLaudeCount)
+*/
 
 
 
@@ -46,10 +48,19 @@ console.log(cumLaudeCount)
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
-function cumLaude() {
 
+
+function cumLaude(arrayOfGrades) {
+    let cumLaudeCount = 0
+        for (let i = 0; i < arrayOfGrades.length; i++) {
+         if (arrayOfGrades[i] >= 8) {
+              cumLaudeCount ++;
+          }
+    }
+    return cumLaudeCount;
 }
 
+console.log(cumLaude(grades))
 
 /* Opdracht  2: Gemiddeld cijfer */
 
@@ -60,6 +71,9 @@ function cumLaude() {
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
+
+
+
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
