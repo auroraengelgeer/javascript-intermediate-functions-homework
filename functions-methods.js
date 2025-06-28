@@ -9,11 +9,13 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
-function getEmailDomain(emailDomain) {
-    return emailDomain.substring(emailDomain.indexOf('@') + 1);
+console.log("uitwerking opdr 1:")
+
+function getEmailDomain(emailAdress) {
+    return emailAdress.substring(emailAdress.indexOf('@') + 1);
 }
 
-console.log(getEmailDomain("a.wiersma@outlook.com"))
+console.log(getEmailDomain("a.wiersma@outlook.com"));
 
 /* Opdracht  2 */
 // Schrijf een functie genaamd typeOfEmail, die een emailadres verwacht. De functie checkt of het emailadres een novi domein heeft (medewerker), een novi-education domein (student), of extern domein (zoals gmail of outlook)
@@ -23,7 +25,19 @@ console.log(getEmailDomain("a.wiersma@outlook.com"))
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+console.log("uitwerking opdr 2:")
 
+function typeOfEmail(emailAdress) {
+    if (emailAdress.substring(emailAdress.indexOf('@') + 1) === "novi.nl") {
+        return "Medewerker"
+    } else if (emailAdress.substring(emailAdress.indexOf('@') + 1) === "novi-education.nl") {
+        return "Student"
+    } else {
+        return "Extern"
+    }
+}
+
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
